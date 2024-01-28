@@ -2,6 +2,7 @@ import { InputHTMLAttributes } from "react";
 
 export interface FormElement extends InputHTMLAttributes<never> {
   id: string;
+  placeholder: string;
   type: InputHTMLAttributes<never>['type'] | 'select';
   options?: string[];
 }

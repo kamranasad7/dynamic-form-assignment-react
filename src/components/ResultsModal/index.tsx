@@ -1,7 +1,7 @@
 import { Button, Modal } from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
-import { GlobalStore, setResultsModal, submitData } from "../store";
-import formConfig from '../fieldset.ts';
+import { GlobalStore, setResultsModal, submitData } from "../../store/index.ts";
+import formConfig from '../../fieldset.ts';
 
 const ResultsModal: React.FC = () => {
 

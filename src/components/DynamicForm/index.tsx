@@ -1,6 +1,6 @@
 import { FormEvent, useRef } from 'react';
-import formConfig, { FormElement } from '../fieldset.ts';
-import { GlobalStore, setResultsModal, setValidationErrors, submitData } from '../store/index.ts';
+import formConfig, { FormElement } from '../../fieldset.ts';
+import { GlobalStore, setResultsModal, setValidationErrors, submitData } from '../../store/index.ts';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Select, TextInput } from 'flowbite-react';
 
@@ -26,7 +26,7 @@ const DynamicForm = () => {
 
     const InputField = (props: FormElement) => (
         <div className='flex-1'>
-            <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{props.placeholder}</label>
+            <label htmlFor={props.id} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{props.placeholder}</label>
             {props.type !== 'select' ?
                 <TextInput
                     {...props}
