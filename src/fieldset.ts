@@ -1,4 +1,12 @@
-export default [
+import { InputHTMLAttributes } from "react";
+
+export interface FormElement extends InputHTMLAttributes<never> {
+  id: string;
+  type: InputHTMLAttributes<never>['type'] | 'select';
+  options?: string[];
+}
+
+const config: (FormElement | FormElement[])[] = [
   [{
     id: 'firstName',
     placeholder: 'First name',
@@ -13,6 +21,7 @@ export default [
   }],
   {
     id: 'Email',
+    placeholder: 'Email',
     required: true,
     type: 'text',
   },
@@ -24,19 +33,24 @@ export default [
   [{
     id: 'city',
     type: 'text',
+    placeholder: 'City',
   },
   {
     id: 'state',
     type: 'text',
+    placeholder: 'State',
+
   },
   {
     id: 'zip',
     type: 'text',
+    placeholder: 'Zip',
   }],
   {
     id: 'phone',
     required: true,
     type: 'text',
+    placeholder: 'Phone',
   },
   {
     id: 'jobTitle',
@@ -53,7 +67,9 @@ export default [
   },
   {
     id: 'reason',
-    placeholder: 'Describe why you are a good fit for the job you are applying for.',
+    placeholder: 'Describe why you are a good fit for the job you are applying for',
     type: 'textarea',
   }
 ];
+
+export default config;

@@ -1,10 +1,12 @@
 import DynamicForm from "./components/DynamicForm";
+import ResultsModal from "./components/ResultsModal";
 
 const App = () => {
 
   return (
-    <div className='w-[60%] rounded-lg bg-white p-4 self-center'>
+    <div className='py-6'>
       <DynamicForm />
+      <ResultsModal />
     </div>
   );
 };
